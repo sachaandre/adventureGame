@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:fantasy;
+    box-sizing: border-box;
+}
+
+
+.gameScreen{
+    margin: 5% auto;
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    border: 5px solid #111;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+h1{ margin-bottom: 30px;}
+
+
+.input {
+    padding: 10px;
+    background: #111;
+    border: 0;
+    color: #fff;
+}
+
+.input:active{
+    background: #fff;
+    color: #111;
+}

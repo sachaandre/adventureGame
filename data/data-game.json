@@ -1,0 +1,20 @@
+ {
+    "intro": [
+        { "currentText": "Bienvenue dans ce jeu d'aventure.", "has_choices": "false" },
+        { "currentText": "Vous serez un aventurier confronté à diverses situations. Dans chaque situation vous aurez le choix entre deux actions", "has_choices": "false" },
+        { "currentText": "Pour chaque action vous aurez un lancé de dé de 6 à réaliser.", "has_choices": "false" },
+        { "currentText": "Si vous faite 1, 2 ou 3, vous ratez votre action. Si vous faites 4, 5 ou 6, vous la réussissez", "has_choices": "false" },
+        { "currentText": "Réaliser un echec ne vous fait pas mourrir (imédiatement), mais il vous compliquera votre aventure.", "has_choices": "false" },
+        { "currentText": "Vous êtes dans une bourgade de la contrée de Tol et Onne, attablé dans l'une des meilleurs auberge de la région, attendant le plat à succès : Le lapin aux pruneaux", "has_choices": "false" },
+        { "currentText": "Mais récemment, un vil sorcier, du nom de , a décidé de s'installer dans le village, et d'y construire son chateau maléfique", "has_choices": "false" },
+        { "currentText": "Son plan diabolique comportait, entre autre la domination du monde, comme dans le plan de tout vilain qui se respecte,", "has_choices": "false" },
+        { "currentText": "mais surtout l'eradication de tous les pruneaux !", "has_choices": "false" }
+    ],
+    
+    "p1": [
+        { "currentText": "Il va maintenant falloir choisir.", "has_choices": "false" },
+        { "currentText": "Vous avez le choix entre deux personnages :", "has_choices": "false" },
+        { "currentText": "1. Un barde frêle, sans réél charisme avec un talent musical approximatif", "has_choices": "false" },
+        { "currentText": "2. Un guerrier puissant qui a tendence à tout casser sur son passage, mais qui a de bonnes stats", "has_choices": "true", "choice_1": "Devenir un Barde", "choice_2": "Devenir un Guerrier" }
+    ]
+}
