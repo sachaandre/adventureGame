@@ -1,5 +1,5 @@
 {
-    "p1": [
-        {"currentText": "Bravo vous avez choisi de devenir un warrior", has_choices:"false"}
+    "1": [
+        {"currentText": "Bravo vous avez choisi de devenir un warrior", "has_choices":"false"}
     ]
 }

@@ -12,13 +12,13 @@ LittleAdventure.UI.init = function () {
     });
     
     c1.addEventListener('click', function () {
-        LittleAdventure.Game.nextSentence();
         LittleAdventure.UI.sendButtonData(1);
+        LittleAdventure.Game.nextSentence();
     });
     
     c2.addEventListener('click', function () {
-        LittleAdventure.Game.nextSentence();
         LittleAdventure.UI.sendButtonData(2);
+        LittleAdventure.Game.nextSentence();
     });
 };
 

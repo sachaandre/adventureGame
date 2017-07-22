@@ -71,12 +71,12 @@ LittleAdventure.Game.nextSentence = function () {
             this.data.setCurrentText("This is a sample text");
             this.ui.refreshText();
         }
-    } else if (this.player.type === 1) { // If the player is a Bard
-        console.log("toto");
-        this.data.getData("data-bard");
-        dataText = this.data.text;
-        this.data.setCurrentText(dataText.p1[i].currentText);
-        this.ui.setButtons(dataText.p1[i].has_choices, this.data.choiceText1, this.data.choiceText2);
+    }
+    if (this.player.type === 1) { // If the player is a Bard
+        console.log("totoro");
+        this.data.setCurrentText("Im doing shit yo");
+        this.ui.setButtons(dataText.intro[i].has_choices);
+        this.ui.refreshText();
     }
 };
 
