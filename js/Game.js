@@ -14,7 +14,6 @@ LittleAdventure.Game = {
         //reference player,die,ui
         this.player = LittleAdventure.Player;
         this.die = LittleAdventure.Die;
-        this.ui = LittleAdventure.UI;
         //Init player and die
         this.player.init({
             life: 0,
@@ -24,17 +23,19 @@ LittleAdventure.Game = {
         this.nextSentence();
     },
 	
-	choiceEvent : function (choice) {
+	choiceEvent : function (btn) {
         "use strict";
 		var self = this; // self pointe sur LittleAdventure.Game
 		
-		//Au clic on récupére la valeure du callback définis ci-dessous
-		choice.addEventListener("click", function () {
+		//Au clic on récupére la valeur du callback définis ci-dessous
+		btn.addEventListener("click", function () {
 			var callback = this.getAttribute("data-action");
-			self.current_ramification = callback; // La raification courante devient celle du callback
+            console.log(callback);
+			self.current_ramification = callback;
 			self.current_screen = 0; //L'écran est par défaut à 0 comme on commence la ramification au début.
+            console.log(self.current_ramification);
 			self.nextSentence();
-		}, false);
+		}, true);
 	},
     
 	nextSentence : function () {
@@ -45,6 +46,8 @@ LittleAdventure.Game = {
             self = this;
 		// Code pour afficher la phrase à l'utilisateur
 		// ... //
+        
+        console.log(this.current_ramification);
         document.getElementById('story').innerHTML = screen.content;
         
         if (btnParent.firstChild) {
@@ -65,7 +68,7 @@ LittleAdventure.Game = {
                 btn.setAttribute("data-action", screen.choices[i].callback);
 				
 				//On s'occupe de l'évenement au clic dessus
-				this.choiceEvent(screen.choices[i]);
+				this.choiceEvent(btn);
 			}
 		} else if (screen.type === "text") {
 			// Code pour afficher le bouton next et l'évenement au clique sur ce dernier qui relance la fonction nextSentence

@@ -1,15 +1,20 @@
-ramifications = {
+var ramifications = {
 	// Ramification intro, par défaut le début du jeu. (Prévoir un comportement particulier pour celle là)
 	intro: [
 		//Ecran 1 : Correspond a un texte. Un boutton next permet de passer à l'écran suivant
 		{
+			type: "text",
+			content: "Welcome into an incredible adventure that is being build right now"
+		},
+        
+        {
 			type: "text",
 			content: "This is a simple gnagna text"
 		},
 		//Ecran 2 : Choix multiples, en fonction de la valeure sélectionner l'utilisateur est renvoyer vers une autre ramification ou continue sur la courante
 		{
 			type: "choice",
-			content: "gnagnagna",
+			content: "This is a critical point",
 			choices: [
 				{
 					type: "option",
@@ -20,11 +25,6 @@ ramifications = {
 					type: "option",
 					content: "Continuer",
 					callback: "ramification-1"
-				},
-				{
-					type: "option",
-					content: "Continuer"
-					//Pas de callback, 
 				}
 			]
 		},
