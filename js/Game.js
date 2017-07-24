@@ -3,7 +3,11 @@ var LittleAdventure = LittleAdventure || {};
 LittleAdventure.Game = {};
 
 var ramifications = ramifications,
-    i;
+    i,
+    audio = new Audio("Dreamy Flashback.mp3");
+
+audio.play();
+audio.volume = 0.5;
 
 LittleAdventure.Game = {
 	current_ramification : "intro", // Imaginons que c'est  "rencontre_avec_un_thug"
@@ -56,11 +60,11 @@ LittleAdventure.Game = {
             
             self.die.value < 4 ? info = "Fail :(" : info = "Success !";
             throwInput.innerHTML = self.die.value + " // " + info;
-            
+            this.style.display = "none";
             setTimeout(function () {
                 throwArea.style.display = "none";
                 self.nextSentence();
-            }, 5000);
+            }, 3000);
         
         });
     },
@@ -73,8 +77,7 @@ LittleAdventure.Game = {
             self = this;
 		// Code pour afficher la phrase à l'utilisateur
 		// ... //
-        
-        console.log(this.current_ramification);
+
         document.getElementById('story').innerHTML = screen.content;
         
         if (btnParent.firstChild) {
@@ -119,6 +122,7 @@ LittleAdventure.Game = {
         }
 		this.current_screen += 1;  // On incrémente de 1 l'écran actuelle
 	}
+    
 };
 LittleAdventure.Game.init();
 

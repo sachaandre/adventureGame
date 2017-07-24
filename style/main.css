@@ -22,6 +22,8 @@ body{
     animation: gradient 30s ease-in-out infinite;
 }
 
+
+
 @-moz-keyframes gradient {
   0% {
     background-position: 14% 0%;
@@ -76,20 +78,32 @@ GAME
 
 h1{ margin-bottom: 30px; font-weight: 700;}
 
-.storyValue{ width: 75%; margin: 0 auto;}
+
+.storyArea { background: #f1F1F1; box-shadow: 0px 0px 20px 0px #555; padding: 20px; }
+.storyValue{ width: 75%; margin: 0 auto; color: #222}
 
 .input {
-    padding: 10px;
-    background: #111;
-    border: 0;
-    color: #fff;
+    padding: 10px 15px;
+    background: rgba(0,0,0,0);
+    border: 5px solid #fff;
+    margin: 0 20px;
+    transition: 0.3s all;
 }
 
 .input:active{
-    background: #fff;
-    color: #111;
+    background: #f1f1f1;
+    border-color: #f1f1f1;
 }
 
 .throwArea{
     display: none;
+}
+
+.input:hover{
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    color: #5659ca;
+    background: #fff
 }
