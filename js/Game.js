@@ -29,18 +29,16 @@ LittleAdventure.Game = {
 		
 		//Au clic on récupére la valeur du callback définis ci-dessous
 		btn.addEventListener("click", function () {
-			var callback = this.getAttribute("data-action");
-            console.log(callback);
+            var callback = this.getAttribute("data-action");
 			self.current_ramification = callback;
 			self.current_screen = 0; //L'écran est par défaut à 0 comme on commence la ramification au début.
-            console.log(self.current_ramification);
 			self.nextSentence();
 		}, true);
 	},
     
 	nextSentence : function () {
         "use strict";
-		var screen = ramifications[this.current_ramification][this.current_screen],
+        var screen = ramifications[this.current_ramification][this.current_screen], // Bugging here
             btn,
             btnParent = document.querySelector(".inputArea"),
             self = this;
