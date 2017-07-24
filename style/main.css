@@ -1,24 +1,81 @@
 *{
     margin:0;
     padding: 0;
-    font-family:fantasy;
+    color: #fff;
+    font-family: 'Montserrat', fantasy;
     box-sizing: border-box;
+    font-weight: 300;
 }
 
+/*************************************************
+**************************************************
+
+LINEAR GRADIANT
+
+*************************************************/
+body{
+
+    background: linear-gradient(120deg, #8e44ad, #c0392b, #3498db);
+    background-size: 800% 800%;
+    -moz-animation: gradient 30s ease-in-out infinite;
+    -webkit-animation: gradient 30s ease-in-out infinite;
+    animation: gradient 30s ease-in-out infinite;
+}
+
+@-moz-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+
+/*************************************************
+**************************************************
+
+GAME
+
+*************************************************/
 
 .gameScreen{
     margin: 5% auto;
     height: 80%;
     width: 80%;
     text-align: center;
-    border: 5px solid #111;
     padding: 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
 }
 
-h1{ margin-bottom: 30px;}
+h1{ margin-bottom: 30px; font-weight: 700;}
+
 .storyValue{ width: 75%; margin: 0 auto;}
 
 .input {
