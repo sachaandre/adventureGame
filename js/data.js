@@ -19,7 +19,7 @@ var ramifications = {
 				{
 					type: "option",
 					content: "Devenir un barde",
-					callback: "create_barde" // L'action pointe
+					callback: "create_bard_action" // L'action pointe
 				},
 				{
 					type: "option",
@@ -33,10 +33,17 @@ var ramifications = {
 			content: "On continue"
 		}
 	],
-	create_bard : [
+    create_bard_action : [
+        {
+            type : "throw",
+            content : " This is some text to roll a die",
+            action_name : "create_bard"
+        }
+    ],
+	create_bard_succeed : [
 		{
 			type: "text",
-			content: "Un thug sauvage apparait, il a l'air vraiment con"
+			content: "Un thug sauvage apparait, il a l'air vraiment con mais vous êtes un bard"
 		},
 		{
 			type: "text",
@@ -59,7 +66,7 @@ var ramifications = {
 			]
 		}
 	],
-	aller_manger_domac : [
+	create_bard_fail : [
 		{
 			type: "text",
 			content: "Un thug sauvage apparait, il a l'air vraiment con"

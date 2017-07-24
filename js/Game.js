@@ -36,6 +36,35 @@ LittleAdventure.Game = {
 		}, true);
 	},
     
+    rollEvent : function (btn) {
+        "use strict";
+        var self = this,
+            throwArea = document.querySelector('.throwArea'),
+            throwInput = document.getElementById("throw"),
+            info;
+        
+        throwArea.style.display = "block";
+        throwInput.innerHTML = "Waiting for you throw";
+        
+        btn.addEventListener("click", function () {
+            //Rolling the die
+            self.die.rollDie();
+            self.current_ramification = this.getAttribute("data-action");
+            
+            self.die.value < 4 ? self.current_ramification += "_fail" : self.current_ramification += "_succeed";
+            self.current_screen = 0;
+            
+            self.die.value < 4 ? info = "Fail :(" : info = "Success !";
+            throwInput.innerHTML = self.die.value + " // " + info;
+            
+            setTimeout(function () {
+                throwArea.style.display = "none";
+                self.nextSentence();
+            }, 5000);
+        
+        });
+    },
+    
 	nextSentence : function () {
         "use strict";
         var screen = ramifications[this.current_ramification][this.current_screen], // Bugging here
@@ -79,7 +108,15 @@ LittleAdventure.Game = {
             btn.addEventListener("click", function () {
                 self.nextSentence();
             }, false);
-		}
+		} else if (screen.type === "throw") {
+            btn = document.createElement("button");
+            btn.className = "input";
+            btn.innerHTML = "Throw the die";
+            btn.setAttribute("data-action", screen.action_name);
+            btnParent.appendChild(btn);
+            
+            this.rollEvent(btn);
+        }
 		this.current_screen += 1;  // On incrémente de 1 l'écran actuelle
 	}
 };
